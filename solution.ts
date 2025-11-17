@@ -45,10 +45,6 @@ class Person {
 // const person2 = new Person("Alice", 25);
 // console.log(person2.getDetails());
 
-
-
-
-
 type Item = {
   title: string;
   rating: number;
@@ -58,16 +54,55 @@ function filterByRating(item: Item[]): Item[] {
   return item.filter((item) => item.rating >= 4);
 }
 
-
-
 const books = [
-  { title: 'Book A', rating: 4.5 },
-  { title: 'Book B', rating: 3.2 },
-  { title: 'Book C', rating: 5.0 },
+  { title: "Book A", rating: 4.5 },
+  { title: "Book B", rating: 3.2 },
+  { title: "Book C", rating: 5.0 },
 ];
 
 // console.log(filterByRating(books));
 
+type User = {
+  id: number;
+  name: string;
+  email: string;
+  isActive: boolean;
+};
+
+function filterActiveUsers(users: User[]): User[] {
+  return users.filter((user) => user.isActive === true);
+}
+
+const users = [
+  { id: 1, name: "Rakib", email: "rakib@example.com", isActive: true },
+  { id: 2, name: "Asha", email: "asha@example.com", isActive: false },
+  { id: 3, name: "Rumi", email: "rumi@example.com", isActive: true },
+];
+
+// console.log(filterActiveUsers(users));
+
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+  isAvailable: boolean;
+}
+
+function printBookDetails(book: Book): void {
+  const availability = book.isAvailable ? "Yes" : "No";
+
+  console.log(
+    `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`
+  );
+}
 
 
 
+const myBook: Book = {
+  title: 'The Great Gatsby',
+  author: 'F. Scott Fitzgerald',
+  publishedYear: 1925,
+  isAvailable: true,
+};
+
+printBookDetails(myBook);
