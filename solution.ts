@@ -8,9 +8,7 @@ function formatValue(value: string | number | boolean) {
   }
 }
 
-// console.log(formatValue('hello'));
-// console.log(formatValue(5));
-// console.log(formatValue(true));
+
 
 function getLength(value: string | any[]): number {
   if (typeof value === "string") {
@@ -22,8 +20,6 @@ function getLength(value: string | any[]): number {
   throw new Error("Invalid Input");
 }
 
-// console.log(getLength('typescript'));
-// console.log(getLength([10, 20, 30, 40]));
 
 class Person {
   name: string;
@@ -39,11 +35,9 @@ class Person {
   }
 }
 
-// const person1 = new Person("John Doe", 30);
-// console.log(person1.getDetails());
 
-// const person2 = new Person("Alice", 25);
-// console.log(person2.getDetails());
+
+
 
 type Item = {
   title: string;
@@ -60,7 +54,8 @@ const books = [
   { title: "Book C", rating: 5.0 },
 ];
 
-// console.log(filterByRating(books));
+
+
 
 type User = {
   id: number;
@@ -79,7 +74,8 @@ const users = [
   { id: 3, name: "Rumi", email: "rumi@example.com", isActive: true },
 ];
 
-// console.log(filterActiveUsers(users));
+
+
 
 interface Book {
   title: string;
@@ -103,14 +99,15 @@ const myBook: Book = {
   isAvailable: true,
 };
 
-// printBookDetails(myBook);
+
+
 
 function getUniqueValues(
   arr1: (number | string)[],
   arr2: (number | string)[]
 ): (number | string)[] {
   const result: (number | string)[] = [];
-  const combined = [...arr1, ...arr2]; // just to loop once
+  const combined = [...arr1, ...arr2]; 
 
   for (let i = 0; i < combined.length; i++) {
     let isUnique = true;
@@ -131,7 +128,10 @@ function getUniqueValues(
 const array1 = [1, 2, 3, 4, 5, 8];
 const array2 = [3, 4, 5, 6, 7, 7, 7, 8, 8];
 
-// console.log(getUniqueValues(array1, array2));
+
+
+
+
 
 type Product = {
   name: string;
@@ -139,6 +139,7 @@ type Product = {
   quantity: number;
   discount?: number;
 };
+
 
 function calculateTotalPrice(products: Product[]): number {
   if (products.length === 0) return 0;
@@ -163,4 +164,3 @@ const products = [
   { name: 'Bag', price: 50, quantity: 1, discount: 20 },
 ];
 
-console.log(calculateTotalPrice(products)); 
